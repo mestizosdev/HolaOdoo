@@ -21,7 +21,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/greetings_dashboard.xml',
+        'views/greet_dashboard.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
