@@ -1,0 +1,19 @@
+<odoo>
+    <menuitem name="Greetings" id="menu_owl_greet" sequence="10">
+        <menuitem
+                name="Dashboard"
+                id="menu_owl_greet_dashboard"
+                sequence="10"
+                action="action_owl_greet_dashboard"/>
+
+    </menuitem>
+
+    <menuitem id="menu_greet_configuration"
+              name="Configuration"
+              parent="menu_owl_greet"
+              sequence="1000">
+        <menuitem id="menu_action_country"
+                  action="action_country_tree"
+                  sequence="90"/>
+    </menuitem>
+</odoo>
