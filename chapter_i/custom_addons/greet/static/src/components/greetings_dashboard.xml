@@ -1,9 +1,7 @@
 <templates xml:space="preserve">
     <t t-name="owl.OwlGreetingsDashboard" owl="1">
-        <div class="vh-100 overflow-auto bg-muted">
-            <div class="shadow-sm border m-2 p-4 bg-white">
-                <h2>Greetings Dashboard</h2>
-            </div>
+        <div class="shadow-sm border m-2 p-4 bg-white">
+            <h2>Greetings Dashboard</h2>
         </div>
     </t>
 </templates>

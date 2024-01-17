@@ -1,5 +1,5 @@
 # Chapter I
-Create my first module
+Create my first module with Owl
 ## Create database user
 ```
 CREATE ROLE odoo WITH LOGIN NOSUPERUSER CREATEDB NOCREATEROLE INHERIT NOREPLICATION CONNECTION LIMIT -1 PASSWORD 'o';

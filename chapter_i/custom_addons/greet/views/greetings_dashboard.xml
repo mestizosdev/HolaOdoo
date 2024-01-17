@@ -6,7 +6,7 @@
         </record>
         <menuitem name="Greetings" id="menu_owl_tutorial" sequence="10">
             <menuitem
-                    name="Greetings Dashboard"
+                    name="Dashboard"
                     id="menu_owl_greetings_dashboard"
                     sequence="10"
                     action="action_owl_greetings_dashboard"/>
