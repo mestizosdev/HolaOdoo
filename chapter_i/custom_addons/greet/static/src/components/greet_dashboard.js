@@ -13,7 +13,9 @@ export class OwlGreetDashboard extends Component {
         this.orm = useService("orm")
 
         onWillStart(async () => {
+            console.log("onWillStart")
             this.state.title = "Greetings Dashboard"
+            console.log(this.state.title)
             this.state.information = await this.getModuleInformation()
         })
     }
