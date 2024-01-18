@@ -15,7 +15,6 @@ export class OwlGreetDashboard extends Component {
         onWillStart(async () => {
             this.state.title = "Greetings Dashboard"
             this.state.information = await this.getModuleInformation()
-            console.log(this.state.information)
         })
     }
 
@@ -25,6 +24,7 @@ export class OwlGreetDashboard extends Component {
             [['name', '=', 'greet']],
             ['author', 'description', 'shortdesc', 'website', 'license', 'summary']
         )
+        console.log(information)
 
         return information
     }
