@@ -13,7 +13,7 @@
                     </li>
                     <div class="card mt-3" style="width: 18rem;">
                         <div class="card">
-                            <ChartRenderer title="'Modules'" data="state.countModules"/>
+                            <ChartRenderer title="'Odoo Modules'" data="state.countModules"/>
                         </div>
                     </div>
                     <li class="list-group-item">

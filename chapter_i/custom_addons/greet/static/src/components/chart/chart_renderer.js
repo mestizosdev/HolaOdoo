@@ -22,8 +22,8 @@ export class ChartRenderer extends Component {
             console.log('title', this.state.title)
             console.log('data', this.state.data)
 
-            let labels = []
-            let metrics = []
+            const labels = []
+            const metrics = []
             this.state.data.map((item) => {
                 labels.push(item.state)
                 metrics.push(item.state_count)

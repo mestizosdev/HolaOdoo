@@ -4,7 +4,7 @@ import { registry } from '@web/core/registry'
 import { useService } from '@web/core/utils/hooks'
 import { ChartRenderer } from './chart/chart_renderer'
 
-const { Component, useState, onWillStart, useRef, onMounted } = owl
+const { Component, useState, onWillStart } = owl
 
 export class OwlGreetDashboard extends Component {
     setup() {
@@ -25,7 +25,7 @@ export class OwlGreetDashboard extends Component {
     }
 
     async getModuleInformation() {
-        let information = await this.orm.searchRead(
+        const information = await this.orm.searchRead(
             'ir.module.module',
             [['name', '=', 'greet']],
             ['author', 'description', 'shortdesc', 'website', 'summary']
@@ -36,11 +36,11 @@ export class OwlGreetDashboard extends Component {
     }
 
     async getCountGroupModules() {
-        let countModules = await this.orm.readGroup(
+        const countModules = await this.orm.readGroup(
             'ir.module.module',
             [],
             ['state'],
-//            ['state:count_distinct', 'state'],
+           // ['state:count_distinct', 'state'],
             ['state']
         )
         console.log('countModules', countModules)
