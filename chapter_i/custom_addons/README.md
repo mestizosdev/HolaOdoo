@@ -65,3 +65,17 @@ pip install watchdog
 ```
 odoo -c odoo.conf -i greet --dev=all
 ```
+## Odoo shell
+```
+odoo shell -c odoo.conf
+```
+## Group by in odoo ORM
+```
+self.env['ir.module.module'].search_read([['name', '=', 'greet']],['author', 'description', 'shortdesc', 'website', 'summary'])
+```
+```
+self.env['ir.module.module'].read_group([],['state:count_distinct', 'state'],['state'])
+```
+```
+self.env['ir.module.module'].read_group([],[],['state'])
+```

@@ -1,7 +1,7 @@
 <templates xml:space="preserve">
     <t t-name="owl.OwlGreetDashboard" owl="1">
-        <div class="container">
-            <div class="card mt-4">
+        <div class="vh-100 overflow-auto p-3 bg-muted">
+            <div class="card mt-3">
                 <div class="card-header">
                     <h2 t-esc="state.title"/>
                 </div>
@@ -15,6 +15,11 @@
                         <p class="text-center">&#60; / &#62; with &#x2665; by <span t-esc="i.author"/></p>
                     </li>
                 </ul>
+                </div>
+            </div>
+            <div class="card mt-3" style="width: 18rem;">
+                <div class="card">
+                    <ChartRenderer title="'Modules'" data="state.countModules"/>
                 </div>
             </div>
         </div>
