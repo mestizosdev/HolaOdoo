@@ -22,6 +22,8 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/greet_dashboard.xml',
+        'views/res_country.xml',
+        'views/greet_menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -5,7 +5,7 @@
     'summary': "Greetings in different languages",
 
     'description': """
-        Greetings in different languages for Odoo 17
+Greetings in different languages for Odoo 17
     """,
 
     'author': "Jorge Luis",
@@ -13,7 +13,7 @@
 
     'category': 'Learning/Learning',
     'version': '0.1',
-    'license': 'LGPL-3',
+    'license': 'AGPL-3',
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'web'],
@@ -36,3 +36,4 @@
         ],
     },
 }
+

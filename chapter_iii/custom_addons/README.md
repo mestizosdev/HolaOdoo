@@ -1,10 +1,5 @@
 # Chapter I
 Create my first module with Owl
-
-## Resources
-- getbootstrap.com
-- www.chartjs.org
-
 ## Create database user
 ```
 CREATE ROLE odoo WITH LOGIN NOSUPERUSER CREATEDB NOCREATEROLE INHERIT NOREPLICATION CONNECTION LIMIT -1 PASSWORD 'o';
@@ -67,27 +62,6 @@ mkdir -p ./static/description
 pip install watchdog
 ```
 ## Run Odoo and install module
-Install module
 ```
 odoo -c odoo.conf -i greet --dev=all
-```
-Update module
-```
-odoo -c odoo.conf -u greet --dev=all
-```
-## Odoo shell
-```
-odoo shell -c odoo.conf
-```
-## Odoo ORM
-Select
-```
-self.env['ir.module.module'].search_read([['name', '=', 'greet']],['author', 'description', 'shortdesc', 'website', 'summary'])
-```
-Select Group by
-```
-self.env['ir.module.module'].read_group([],['state:count_distinct', 'state'],['state'])
-```
-```
-self.env['ir.module.module'].read_group([],[],['state'])
 ```
