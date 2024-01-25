@@ -1,8 +1,8 @@
-# Chapter I
+# Chapter II
 Create my first module with Owl
 
 ## Resources
-- getbootstrap.com
+- www.getbootstrap.com
 - www.chartjs.org
 
 ## Create database user

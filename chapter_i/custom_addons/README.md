@@ -2,8 +2,7 @@
 Create my first module with Owl
 
 ## Resources
-- getbootstrap.com
-- www.chartjs.org
+- www.getbootstrap.com
 
 ## Create database user
 ```
@@ -74,20 +73,4 @@ odoo -c odoo.conf -i greet --dev=all
 Update module
 ```
 odoo -c odoo.conf -u greet --dev=all
-```
-## Odoo shell
-```
-odoo shell -c odoo.conf
-```
-## Odoo ORM
-Select
-```
-self.env['ir.module.module'].search_read([['name', '=', 'greet']],['author', 'description', 'shortdesc', 'website', 'summary'])
-```
-Select Group by
-```
-self.env['ir.module.module'].read_group([],['state:count_distinct', 'state'],['state'])
-```
-```
-self.env['ir.module.module'].read_group([],[],['state'])
 ```
