@@ -1,5 +1,5 @@
-# Chapter II
-Create my first module with Owl
+# Chapter III
+Create chart with metrics of Odoo modules
 
 ## Resources
 - www.getbootstrap.com
@@ -84,10 +84,12 @@ Select
 ```
 self.env['ir.module.module'].search_read([['name', '=', 'greet']],['author', 'description', 'shortdesc', 'website', 'summary'])
 ```
-Select Group by
+### Select Group by
+Not good query
 ```
 self.env['ir.module.module'].read_group([],['state:count_distinct', 'state'],['state'])
 ```
+Good query
 ```
 self.env['ir.module.module'].read_group([],[],['state'])
 ```
