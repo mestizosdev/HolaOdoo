@@ -1,55 +1,60 @@
-/** @odoo-module */
+/** @odoo-module **/
 
-import { registry } from '@web/core/registry'
-import { loadJS } from '@web/core/assets'
+import {
+  loadJS
+} from '@web/core/assets'
 
-const { Component, useState, onWillStart, useRef, onMounted } = owl
+const {
+  Component,
+  useState,
+  onWillStart,
+  useRef,
+  onMounted
+} = owl
 
-export class ChartRenderer extends Component {
-    setup() {
-        this.chartRef = useRef('chart')
-        this.state = useState({
-            title: this.props.title,
-            data: this.props.data,
-        })
+export class OwlChartRenderer extends Component {
+  setup() {
+    this.chartRef = useRef('chart')
+    this.state = useState({
+      title: this.props.title,
+      type: this.props.type,
+      data: this.props.data
+    })
 
-        onWillStart(async () => {
-            await loadJS('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js')
-        })
+    onWillStart(async () => {
+      await loadJS('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js')
+    })
 
-        onMounted(()=>{
-            console.log('chart_renderer.js')
-            console.log('title', this.state.title)
-            console.log('data', this.state.data)
+    onMounted(() => {
+      console.log('Chart Renderer Mounted')
 
-            const labels = []
-            const metrics = []
-            this.state.data.map((item) => {
-                labels.push(item.state)
-                metrics.push(item.state_count)
-            })
+      console.log('Chart Renderer Data', this.state.data)
 
-            this.render(this.state.title, labels, metrics)
-        })
-    }
+      const labels = []
+      const metrics = []
+      this.state.data.map((item) => {
+        labels.push(item.state)
+        metrics.push(item.state_count)
+      })
 
-    render(title, labels, metrics) {
-        new Chart(
-            this.chartRef.el,
-            {
-                type: 'pie',
-                data: {
-//                    labels: ['Blue','Red', 'Yellow'],
-                    labels: labels,
-                    datasets: [{
-                        label: title,
-//                        data: [300, 50, 100],
-                        data: metrics,
-                    }]
-                }
-            }
-        )
-    }
+      this.render(this.state.title, labels, metrics, this.state.type)
+    })
+  }
+
+  render(title, labels, metrics, type = 'pie') {
+    new Chart(this.chartRef.el, {
+      type,
+      data: {
+        // labels: ['Red', 'Blue', 'Yellow'],
+        labels: labels,
+        datasets: [{
+          label: title,
+          // data: [12, 19, 3]
+          data: metrics
+        }]
+      }
+    })
+  }
 }
 
-ChartRenderer.template = "owl.ChartRenderer"
+OwlChartRenderer.template = 'owl.OwlChartRenderer'
