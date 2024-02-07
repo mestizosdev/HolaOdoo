@@ -11,8 +11,8 @@
         <field name="model">greet.friend</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="nickname"/>
                 <field name="name"/>
+                <field name="nickname"/>
             </tree>
         </field>
     </record>
@@ -25,7 +25,6 @@
                 <group>
                     <field name="name"/>
                     <field name="nickname"/>
-                    <field name="type"/>
                 </group>
             </form>
         </field>
