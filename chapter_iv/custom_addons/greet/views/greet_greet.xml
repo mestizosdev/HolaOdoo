@@ -1,0 +1,9 @@
+<odoo>
+    <!--Begin - Use as default view-->
+    <record id="action_greet_greet" model="ir.actions.act_window">
+        <field name="name">Greet</field>
+        <field name="res_model">greet.greet</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!--End - Use as default view-->
+</odoo>
