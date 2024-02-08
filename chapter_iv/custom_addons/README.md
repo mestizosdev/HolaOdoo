@@ -1,9 +1,8 @@
-# Chapter III
-Create chart with metrics of Odoo modules
+# Chapter IV
+Defining menus
 
 ## Resources
-- www.getbootstrap.com
-- www.chartjs.org
+- https://www.odoo.com/documentation/17.0/developer/reference/user_interface/view_records.html
 
 ## Create database user
 ```
@@ -78,18 +77,4 @@ odoo -c odoo.conf -u greet --dev=all
 ## Odoo shell
 ```
 odoo shell -c odoo.conf
-```
-## Odoo ORM
-Select
-```
-self.env['ir.module.module'].search_read([['name', '=', 'greet']],['author', 'description', 'shortdesc', 'website', 'summary'])
-```
-### Select Group by
-Not good query
-```
-self.env['ir.module.module'].read_group([],['state:count_distinct', 'state'],['state'])
-```
-Good query
-```
-self.env['ir.module.module'].read_group([],[],['state'])
 ```
