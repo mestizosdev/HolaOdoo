@@ -35,7 +35,7 @@
                   sequence="30">
             <menuitem id="menu_report_greet"
                       name="Greet"
-                      action="action_owl_greet_dashboard"
+                      action="action_greet_report"
                       sequence="10"/>
         </menuitem>
 

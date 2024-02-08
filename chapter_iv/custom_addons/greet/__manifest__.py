@@ -28,6 +28,7 @@ Greetings in different languages for Odoo 17
         'views/greet_greet.xml',
         'views/res_country.xml',
         'views/greet_friend.xml',
+        'views/greet_report.xml',
         'views/greet_menu.xml',
     ],
     # only loaded in demonstration mode
