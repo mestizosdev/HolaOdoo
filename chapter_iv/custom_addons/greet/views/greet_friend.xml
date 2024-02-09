@@ -1,11 +1,5 @@
-i<odoo>
-    <record id="action_greet_friend" model="ir.actions.act_window">
-        <field name="name">Friend</field>
-        <field name="res_model">greet.friend</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <!--Tree Friend-->
+<odoo>
+   <!--Tree Friend-->
     <record id="view_greet_friend_tree" model="ir.ui.view">
         <field name="name">Friend</field>
         <field name="model">greet.friend</field>
@@ -29,5 +23,11 @@ i<odoo>
                 </group>
             </form>
         </field>
+    </record>
+    
+    <record id="action_greet_friend" model="ir.actions.act_window">
+        <field name="name">Friend</field>
+        <field name="res_model">greet.friend</field>
+        <field name="view_mode">tree,form</field>
     </record>
 </odoo>

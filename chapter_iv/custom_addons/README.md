@@ -1,5 +1,5 @@
 # Chapter IV
-Defining menus
+Defining menus, submenus and models
 
 ## Resources
 - https://www.odoo.com/documentation/17.0/developer/reference/user_interface/view_records.html
@@ -49,7 +49,7 @@ db_password = o
 db_user = odoo
 ```
 ## Create Module
-Get into custom addons folder and run
+Create custom_addons folder and run
 ```
 odoo scaffold greet custom_addons
 ```
