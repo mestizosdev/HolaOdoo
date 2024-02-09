@@ -1,6 +1,6 @@
 <odoo>
     <record id="view_greet_greet_tree" model="ir.ui.view">
-        <field name="name">Greet Report</field>
+        <field name="name">Greet</field>
         <field name="model">greet.greet</field>
         <field name="arch" type="xml">
             <tree>

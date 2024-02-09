@@ -7,7 +7,9 @@ class Friend(models.Model):
     _inherits = {'res.partner': 'partner_id'}
 
     nickname = fields.Char()
-    is_friend = fields.Boolean()
     partner_id = fields.Many2one(
-        'res.partner', delegate=True, ondelete='cascade', required=True
+        'res.partner', 
+        delegate=True, 
+        ondelete='cascade', 
+        required=True
     )
