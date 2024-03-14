@@ -1,0 +1,18 @@
+<odoo>
+    <record id="view_greet_greet_tree" model="ir.ui.view">
+        <field name="name">Greet</field>
+        <field name="model">greet.greet</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_greet_greet" model="ir.actions.act_window">
+        <field name="name">Greet</field>
+        <field name="res_model">greet.greet</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_greet_greet_tree"/>
+    </record>
+</odoo>
