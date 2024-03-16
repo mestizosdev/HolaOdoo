@@ -7,7 +7,7 @@ class Friend(models.Model):
     _description = 'Friend'
     _inherits = {'res.partner': 'partner_id'}
 
-    nickname = fields.Char()
+    nickname = fields.Char(required=True)
     partner_id = fields.Many2one(
         'res.partner', 
         delegate=True, 
@@ -18,8 +18,9 @@ class Friend(models.Model):
     @api.constrains('nickname', 'name')
     def _check_nickname(self):
         for friend in self:
-            if not friend.nickname.isalpha():
-                raise ValidationError('Nickname must be alphabetic')
+            if friend.nickname:
+                if not friend.nickname.isalpha():
+                    raise ValidationError('Nickname must be alphabetic')
 
             if not friend.name.isalpha():
                 raise ValidationError('Name must be alphabetic')

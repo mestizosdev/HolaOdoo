@@ -18,8 +18,9 @@
         <field name="arch" type="xml">
             <form>
                 <group>
-                    <field name="name"/>
-                    <field name="nickname"/>
+                    <field name="name" required="1"/>
+                    <field name="nickname" required="1"/>
+                    <field name="country_id"/>
                 </group>
             </form>
         </field>
